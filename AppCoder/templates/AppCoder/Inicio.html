@@ -1,0 +1,18 @@
+{% extends "AppCoder/base.html" %}
+
+{% block body %}
+    <h1>Inicio</h1>
+{% endblock body %}
+
+{% block otroblock %}
+    {% if cursos %}
+    <p>Resultados para: {{camada}}</p>
+    <ul>
+    {% for curso in cursos %}
+        <li>{{curso.nombre}} | {{curso.camada}}</li>
+    {% endfor %}
+    </ul>
+    {% else %}
+    <p>No hay datos con esa descripcion.</p>
+    {% endif %}
+{% endblock %}
